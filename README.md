@@ -9,23 +9,55 @@ A simple web app: upload your resume + paste a job description → get an ATS-fr
 ## Setup
 
 1. **Get a free Gemini API key:** https://aistudio.google.com/app/apikey
-2. **Create your `.env` file** (copy the example):
-   ```powershell
-   Copy-Item .env.example .env
-   ```
+2. **Create your `.env` file** (copy the example)
+
+   - macOS / Linux:
+     ```bash
+     cp .env.example .env
+     ```
+
+   - Windows PowerShell:
+     ```powershell
+     Copy-Item .env.example .env
+     ```
+
    Then open `.env` and paste your key:
-   ```
+   ```text
    GEMINI_API_KEY=your_key_here
    ```
-3. **Install dependencies** (already done if you ran `npm install`):
-   ```powershell
+
+3. **Install Node.js / npm** (if `npm` is not available on your system). Recommended: install `nvm` and use an LTS Node version:
+
+   ```bash
+   curl -fsSL https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.6/install.sh | bash
+   export NVM_DIR="$HOME/.nvm"
+   [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+   nvm install --lts
+   node -v
+   npm -v
+   ```
+
+   Alternative with Homebrew (macOS):
+
+   ```bash
+   brew install node
+   node -v
+   npm -v
+   ```
+
+4. **Install project dependencies:**
+
+   ```bash
    npm install
    ```
-4. **Start the app:**
-   ```powershell
+
+5. **Start the app:**
+
+   ```bash
    npm start
    ```
-5. Open **http://localhost:3000** in your browser.
+
+6. Open **http://localhost:3000** in your browser.
 
 ## How it works
 

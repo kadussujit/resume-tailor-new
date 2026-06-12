@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ATS Resume Tailor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="bg-orbs" aria-hidden="true">
+    <span class="orb orb-1"></span>
+    <span class="orb orb-2"></span>
+    <span class="orb orb-3"></span>
+  </div>
+
+  <header class="hero">
+    <div class="logo-badge">📄✨</div>
+    <h1>ATS Resume Tailor</h1>
+    <p class="sub">Upload your resume, paste a job description, and get a polished, ATS-friendly resume tailored to land the interview.</p>
+    <div class="trust-row">
+      <span class="chip">🔒 Key stays on your machine</span>
+      <span class="chip">🎯 Keyword-aligned</span>
+      <span class="chip">📥 DOCX &amp; PDF</span>
+    </div>
+  </header>
+
+  <main>
+    <!-- STEP 1: inputs -->
+    <section class="card glass" id="input-section">
+      <div class="grid">
+        <div class="field">
+          <label for="resume"><span class="step-num">1</span> Your resume <span class="hint">PDF, DOCX, or TXT</span></label>
+          <label class="dropzone" id="dropzone" for="resume">
+            <div class="dz-icon">⬆️</div>
+            <div class="dz-text"><strong>Click to upload</strong> or drag &amp; drop</div>
+            <div id="file-name" class="file-name"></div>
+          </label>
+          <input type="file" id="resume" accept=".pdf,.docx,.txt" hidden />
+        </div>
+        <div class="field">
+          <label for="jd"><span class="step-num">2</span> Job description <span class="hint">paste the full posting</span></label>
+          <textarea id="jd" rows="11" placeholder="Paste the job description here..."></textarea>
+        </div>
+      </div>
+      <details class="extra">
+        <summary>
+          <span class="ex-left"><span class="ex-icon">⚙️</span> Additional instructions <span class="hint">optional</span></span>
+          <span class="ex-chevron">▾</span>
+        </summary>
+        <div class="ex-body">
+          <p class="ex-help">Anything specific you want applied — e.g. "emphasize leadership", "keep it to one page", "highlight Python and AWS", "use a formal tone". These are followed alongside the job description.</p>
+          <textarea id="instructions" rows="4" placeholder="e.g. Emphasize my cloud experience and keep the summary concise..."></textarea>
+        </div>
+      </details>
+
+      <button id="tailor-btn" class="primary btn-glow">
+        <span class="btn-label">✨ Tailor My Resume</span>
+        <span class="spinner" aria-hidden="true"></span>
+      </button>
+      <div id="status" class="status"></div>
+    </section>
+
+    <!-- STEP 2: results -->
+    <section class="card glass hidden" id="result-section">
+      <div class="result-head">
+        <h2>Your Tailored Resume <span class="badge">editable</span></h2>
+        <div class="actions">
+          <button id="download-docx" class="primary">📄 DOCX</button>
+          <button id="download-pdf" class="secondary">📑 PDF</button>
+          <button id="restart" class="ghost">↺ Start over</button>
+        </div>
+      </div>
+
+      <div id="insights"></div>
+      <form id="resume-form"></form>
+    </section>
+  </main>
+
+  <footer class="foot">Built with Node + Gemini · runs locally on your machine</footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
