@@ -1,0 +1,24 @@
+Jordan Smith
+jordan.smith@email.com | (555) 123-4567 | Austin, TX | linkedin.com/in/jordansmith
+
+SUMMARY
+Software developer with 5 years of experience building web applications. Worked on backend and frontend systems.
+
+EXPERIENCE
+
+Software Developer, Acme Corp, Austin, TX (2021 - Present)
+- Built REST APIs using Node.js and Express
+- Worked with a team of 6 developers
+- Fixed bugs and added features to the customer portal
+- Wrote unit tests
+
+Junior Developer, Beta Solutions, Dallas, TX (2019 - 2021)
+- Helped maintain a PHP web application
+- Did some database work with MySQL
+- Participated in code reviews
+
+EDUCATION
+B.S. Computer Science, University of Texas, 2019
+
+SKILLS
+JavaScript, Node.js, Express, PHP, MySQL, HTML, CSS, Git
